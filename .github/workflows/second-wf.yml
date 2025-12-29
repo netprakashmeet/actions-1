@@ -1,9 +1,11 @@
-name: My First Workflow
+name: My 2nd Workflow
 on: push
 jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
+            - name: checkout repo
+              uses: actions/checkout@v4
             - name: List and Read file
               run: |
                  echo "Hello World"
