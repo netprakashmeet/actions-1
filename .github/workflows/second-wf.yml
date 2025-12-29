@@ -6,10 +6,20 @@ jobs:
         steps:
             - name: checkout repo
               uses: actions/checkout@v4
-            - name: List and Read file
-              run: |
-                 echo "Hello World"
-                 ls -ltra
-                 cat README.md
+            - name: Install Cowsay Program
+              run: sudo apt-get install cowsay -y
             - name: Generate ASCII Artwork
               run: cowsay -f dragon "Run for cover, I am a DRAGON.....RAWR" >> dragon.txt
+            - name: Test file exists
+              run: |
+                  echo "-----------------List dragon.txt---------------"
+                  ls -l dragon.txt              
+                  echo "-----------------------------------------------"
+            - name: Read file
+              run: cat dragon.txt
+            - name: List and Read file
+              run: |
+                 echo "-----------------------------------------------"
+                 ls -ltra 
+                 echo "-----------------------------------------------"
+                 cat README.md
