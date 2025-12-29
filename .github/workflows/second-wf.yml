@@ -1,7 +1,7 @@
 name: My 2nd Workflow
 on: push
 jobs:
-    first_job:
+    Script_execute:
         runs-on: ubuntu-latest
         steps:
             - name: checkout repo
