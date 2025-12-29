@@ -14,7 +14,7 @@ jobs:
               run: |
                   echo "-----------------List dragon.txt---------------"
                   ls -l dragon.txt              
-                  echo "-----------------------------------------------"
+                  echo "--------------------------------------------"
             - name: Read file
               run: cat dragon.txt
             - name: List and Read file
